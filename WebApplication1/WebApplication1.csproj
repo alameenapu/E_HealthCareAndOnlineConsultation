@@ -1,0 +1,529 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{234E6F7E-3091-4A05-B388-8153DF138536}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CSS\grid.css" />
+    <Content Include="CSS\stars.png" />
+    <Content Include="CSS\style.css" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\css\buttons.bootstrap.css" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\css\buttons.bootstrap.min.css" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\css\buttons.dataTables.css" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\css\buttons.dataTables.min.css" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\css\buttons.foundation.css" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\css\buttons.foundation.min.css" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\css\buttons.jqueryui.css" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\css\buttons.jqueryui.min.css" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\css\buttons.semanticui.css" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\css\buttons.semanticui.min.css" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\js\buttons.bootstrap.js" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\js\buttons.bootstrap.min.js" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\js\buttons.colVis.js" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\js\buttons.colVis.min.js" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\js\buttons.flash.js" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\js\buttons.flash.min.js" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\js\buttons.foundation.js" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\js\buttons.foundation.min.js" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\js\buttons.html5.js" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\js\buttons.html5.min.js" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\js\buttons.jqueryui.js" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\js\buttons.jqueryui.min.js" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\js\buttons.print.js" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\js\buttons.print.min.js" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\js\buttons.semanticui.js" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\js\buttons.semanticui.min.js" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\js\dataTables.buttons.js" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\js\dataTables.buttons.min.js" />
+    <Content Include="DataTables-1.10.13\css\dataTables.bootstrap.css" />
+    <Content Include="DataTables-1.10.13\css\dataTables.bootstrap.min.css" />
+    <Content Include="DataTables-1.10.13\css\dataTables.foundation.css" />
+    <Content Include="DataTables-1.10.13\css\dataTables.foundation.min.css" />
+    <Content Include="DataTables-1.10.13\css\dataTables.jqueryui.css" />
+    <Content Include="DataTables-1.10.13\css\dataTables.jqueryui.min.css" />
+    <Content Include="DataTables-1.10.13\css\dataTables.semanticui.css" />
+    <Content Include="DataTables-1.10.13\css\dataTables.semanticui.min.css" />
+    <Content Include="DataTables-1.10.13\css\jquery.dataTables.css" />
+    <Content Include="DataTables-1.10.13\css\jquery.dataTables.min.css" />
+    <Content Include="DataTables-1.10.13\css\jquery.dataTables_themeroller.css" />
+    <Content Include="DataTables-1.10.13\datatables.css" />
+    <Content Include="DataTables-1.10.13\datatables.js" />
+    <Content Include="DataTables-1.10.13\datatables.min.css" />
+    <Content Include="DataTables-1.10.13\datatables.min.js" />
+    <Content Include="DataTables-1.10.13\FixedColumns-3.2.2\css\fixedColumns.bootstrap.css" />
+    <Content Include="DataTables-1.10.13\FixedColumns-3.2.2\css\fixedColumns.bootstrap.min.css" />
+    <Content Include="DataTables-1.10.13\FixedColumns-3.2.2\css\fixedColumns.dataTables.css" />
+    <Content Include="DataTables-1.10.13\FixedColumns-3.2.2\css\fixedColumns.dataTables.min.css" />
+    <Content Include="DataTables-1.10.13\FixedColumns-3.2.2\css\fixedColumns.foundation.css" />
+    <Content Include="DataTables-1.10.13\FixedColumns-3.2.2\css\fixedColumns.foundation.min.css" />
+    <Content Include="DataTables-1.10.13\FixedColumns-3.2.2\css\fixedColumns.jqueryui.css" />
+    <Content Include="DataTables-1.10.13\FixedColumns-3.2.2\css\fixedColumns.jqueryui.min.css" />
+    <Content Include="DataTables-1.10.13\FixedColumns-3.2.2\js\dataTables.fixedColumns.js" />
+    <Content Include="DataTables-1.10.13\FixedColumns-3.2.2\js\dataTables.fixedColumns.min.js" />
+    <Content Include="DataTables-1.10.13\FixedHeader-3.1.2\css\fixedHeader.bootstrap.css" />
+    <Content Include="DataTables-1.10.13\FixedHeader-3.1.2\css\fixedHeader.bootstrap.min.css" />
+    <Content Include="DataTables-1.10.13\FixedHeader-3.1.2\css\fixedHeader.dataTables.css" />
+    <Content Include="DataTables-1.10.13\FixedHeader-3.1.2\css\fixedHeader.dataTables.min.css" />
+    <Content Include="DataTables-1.10.13\FixedHeader-3.1.2\css\fixedHeader.foundation.css" />
+    <Content Include="DataTables-1.10.13\FixedHeader-3.1.2\css\fixedHeader.foundation.min.css" />
+    <Content Include="DataTables-1.10.13\FixedHeader-3.1.2\css\fixedHeader.jqueryui.css" />
+    <Content Include="DataTables-1.10.13\FixedHeader-3.1.2\css\fixedHeader.jqueryui.min.css" />
+    <Content Include="DataTables-1.10.13\FixedHeader-3.1.2\js\dataTables.fixedHeader.js" />
+    <Content Include="DataTables-1.10.13\FixedHeader-3.1.2\js\dataTables.fixedHeader.min.js" />
+    <Content Include="DataTables-1.10.13\js\dataTables.bootstrap.js" />
+    <Content Include="DataTables-1.10.13\js\dataTables.bootstrap.min.js" />
+    <Content Include="DataTables-1.10.13\js\dataTables.foundation.js" />
+    <Content Include="DataTables-1.10.13\js\dataTables.foundation.min.js" />
+    <Content Include="DataTables-1.10.13\js\dataTables.jqueryui.js" />
+    <Content Include="DataTables-1.10.13\js\dataTables.jqueryui.min.js" />
+    <Content Include="DataTables-1.10.13\js\dataTables.semanticui.js" />
+    <Content Include="DataTables-1.10.13\js\dataTables.semanticui.min.js" />
+    <Content Include="DataTables-1.10.13\js\jquery.dataTables.js" />
+    <Content Include="DataTables-1.10.13\js\jquery.dataTables.min.js" />
+    <Content Include="DataTables-1.10.13\print\buttons.colVis.min.js" />
+    <Content Include="DataTables-1.10.13\print\buttons.flash.min.js" />
+    <Content Include="DataTables-1.10.13\print\buttons.html5.min.js" />
+    <Content Include="DataTables-1.10.13\print\buttons.print.min.js" />
+    <Content Include="DataTables-1.10.13\print\dataTables.buttons.min.js" />
+    <Content Include="DataTables-1.10.13\print\datatables.min.css" />
+    <Content Include="DataTables-1.10.13\print\datatables.min.js" />
+    <Content Include="DataTables-1.10.13\print\jszip.min.js" />
+    <Content Include="DataTables-1.10.13\print\pdfmake.min.js" />
+    <Content Include="DataTables-1.10.13\print\vfs_fonts.js" />
+    <Content Include="DataTables-1.10.13\Responsive-2.1.0\css\responsive.bootstrap.css" />
+    <Content Include="DataTables-1.10.13\Responsive-2.1.0\css\responsive.bootstrap.min.css" />
+    <Content Include="DataTables-1.10.13\Responsive-2.1.0\css\responsive.dataTables.css" />
+    <Content Include="DataTables-1.10.13\Responsive-2.1.0\css\responsive.dataTables.min.css" />
+    <Content Include="DataTables-1.10.13\Responsive-2.1.0\css\responsive.foundation.css" />
+    <Content Include="DataTables-1.10.13\Responsive-2.1.0\css\responsive.foundation.min.css" />
+    <Content Include="DataTables-1.10.13\Responsive-2.1.0\css\responsive.jqueryui.css" />
+    <Content Include="DataTables-1.10.13\Responsive-2.1.0\css\responsive.jqueryui.min.css" />
+    <Content Include="DataTables-1.10.13\Responsive-2.1.0\js\dataTables.responsive.js" />
+    <Content Include="DataTables-1.10.13\Responsive-2.1.0\js\dataTables.responsive.min.js" />
+    <Content Include="DataTables-1.10.13\Responsive-2.1.0\js\responsive.bootstrap.js" />
+    <Content Include="DataTables-1.10.13\Responsive-2.1.0\js\responsive.bootstrap.min.js" />
+    <Content Include="DataTables-1.10.13\Responsive-2.1.0\js\responsive.foundation.js" />
+    <Content Include="DataTables-1.10.13\Responsive-2.1.0\js\responsive.foundation.min.js" />
+    <Content Include="DataTables-1.10.13\Responsive-2.1.0\js\responsive.jqueryui.js" />
+    <Content Include="DataTables-1.10.13\Responsive-2.1.0\js\responsive.jqueryui.min.js" />
+    <Content Include="DataTables-1.10.13\RowReorder-1.2.0\css\rowReorder.bootstrap.css" />
+    <Content Include="DataTables-1.10.13\RowReorder-1.2.0\css\rowReorder.bootstrap.min.css" />
+    <Content Include="DataTables-1.10.13\RowReorder-1.2.0\css\rowReorder.dataTables.css" />
+    <Content Include="DataTables-1.10.13\RowReorder-1.2.0\css\rowReorder.dataTables.min.css" />
+    <Content Include="DataTables-1.10.13\RowReorder-1.2.0\css\rowReorder.foundation.css" />
+    <Content Include="DataTables-1.10.13\RowReorder-1.2.0\css\rowReorder.foundation.min.css" />
+    <Content Include="DataTables-1.10.13\RowReorder-1.2.0\css\rowReorder.jqueryui.css" />
+    <Content Include="DataTables-1.10.13\RowReorder-1.2.0\css\rowReorder.jqueryui.min.css" />
+    <Content Include="DataTables-1.10.13\RowReorder-1.2.0\css\rowReorder.semanticui.css" />
+    <Content Include="DataTables-1.10.13\RowReorder-1.2.0\css\rowReorder.semanticui.min.css" />
+    <Content Include="DataTables-1.10.13\RowReorder-1.2.0\js\dataTables.rowReorder.js" />
+    <Content Include="DataTables-1.10.13\RowReorder-1.2.0\js\dataTables.rowReorder.min.js" />
+    <Content Include="DataTables-1.10.13\Scroller-1.4.2\css\scroller.bootstrap.css" />
+    <Content Include="DataTables-1.10.13\Scroller-1.4.2\css\scroller.bootstrap.min.css" />
+    <Content Include="DataTables-1.10.13\Scroller-1.4.2\css\scroller.dataTables.css" />
+    <Content Include="DataTables-1.10.13\Scroller-1.4.2\css\scroller.dataTables.min.css" />
+    <Content Include="DataTables-1.10.13\Scroller-1.4.2\css\scroller.foundation.css" />
+    <Content Include="DataTables-1.10.13\Scroller-1.4.2\css\scroller.foundation.min.css" />
+    <Content Include="DataTables-1.10.13\Scroller-1.4.2\css\scroller.jqueryui.css" />
+    <Content Include="DataTables-1.10.13\Scroller-1.4.2\css\scroller.jqueryui.min.css" />
+    <Content Include="DataTables-1.10.13\Scroller-1.4.2\js\dataTables.scroller.js" />
+    <Content Include="DataTables-1.10.13\Scroller-1.4.2\js\dataTables.scroller.min.js" />
+    <Content Include="DataTables-1.10.13\Select-1.2.0\css\select.bootstrap.css" />
+    <Content Include="DataTables-1.10.13\Select-1.2.0\css\select.bootstrap.min.css" />
+    <Content Include="DataTables-1.10.13\Select-1.2.0\css\select.dataTables.css" />
+    <Content Include="DataTables-1.10.13\Select-1.2.0\css\select.dataTables.min.css" />
+    <Content Include="DataTables-1.10.13\Select-1.2.0\css\select.foundation.css" />
+    <Content Include="DataTables-1.10.13\Select-1.2.0\css\select.foundation.min.css" />
+    <Content Include="DataTables-1.10.13\Select-1.2.0\css\select.jqueryui.css" />
+    <Content Include="DataTables-1.10.13\Select-1.2.0\css\select.jqueryui.min.css" />
+    <Content Include="DataTables-1.10.13\Select-1.2.0\js\dataTables.select.js" />
+    <Content Include="DataTables-1.10.13\Select-1.2.0\js\dataTables.select.min.js" />
+    <Content Include="IMAGE\1003411_401044700013171_1672414815_n.jpg" />
+    <Content Include="IMAGE\alertimg.png" />
+    <Content Include="IMAGE\Apollo Hospitals Dhaka Location Address Phone Number.JPG" />
+    <Content Include="IMAGE\birdem.JPG" />
+    <Content Include="IMAGE\Central Hospital Ltd.JPG" />
+    <Content Include="IMAGE\documents.png" />
+    <Content Include="IMAGE\InfoMap24_place_city-hospital-ltd_5_16_08_09_05_08_13_City Hospital Ltd-1.jpg" />
+    <Content Include="IMAGE\Maleimg\defaultMale.png" />
+    <Content Include="IMAGE\Maleimg\manAbdomen.png" />
+    <Content Include="IMAGE\Maleimg\manBack.png" />
+    <Content Include="IMAGE\Maleimg\manBackArm.png" />
+    <Content Include="IMAGE\Maleimg\manBackHead.png" />
+    <Content Include="IMAGE\Maleimg\manBackLeg.png" />
+    <Content Include="IMAGE\Maleimg\manBackNeck.png" />
+    <Content Include="IMAGE\Maleimg\manBackView.png" />
+    <Content Include="IMAGE\Maleimg\manButtock.png" />
+    <Content Include="IMAGE\Maleimg\manChest.png" />
+    <Content Include="IMAGE\Maleimg\manHand.png" />
+    <Content Include="IMAGE\Maleimg\manHead.png" />
+    <Content Include="IMAGE\Maleimg\manLeg.png" />
+    <Content Include="IMAGE\Maleimg\manNeck.png" />
+    <Content Include="IMAGE\Maleimg\manPelvis.png" />
+    <Content Include="IMAGE\maxresdefault.jpg" />
+    <Content Include="IMAGE\ok.png" />
+    <Content Include="js\jquery-1.2.6.min.js" />
+    <Content Include="js\jquery-2.1.3.js" />
+    <Content Include="js\jquery-2.2.4.js" />
+    <Content Include="js\jquery-2.2.4.min.js" />
+    <Content Include="js\jquery.imagemapster.js" />
+    <Content Include="js\jquery.rater.js" />
+    <Content Include="js\MaleImageMapster.js" />
+    <Content Include="js\newjs.js" />
+    <Content Include="packages.config" />
+    <Content Include="UI\Abscess.aspx" />
+    <Content Include="UI\Accroyanosis.aspx" />
+    <Content Include="UI\AdminForm.aspx" />
+    <Content Include="UI\administrator.aspx" />
+    <Content Include="UI\Blind.aspx" />
+    <Content Include="UI\Bronchities.aspx" />
+    <Content Include="UI\CheckPatient.aspx" />
+    <Content Include="UI\Clinic.aspx" />
+    <Content Include="UI\Diabetes.aspx" />
+    <Content Include="UI\DiseaseService.asmx" />
+    <Content Include="UI\Handler1.ashx" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\css\common.scss" />
+    <Content Include="DataTables-1.10.13\Buttons-1.2.4\css\mixins.scss" />
+    <Content Include="UI\FileCS.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CSS\bootstrap.css" />
+    <Content Include="IMAGE\1.png" />
+    <Content Include="IMAGE\2.png" />
+    <Content Include="IMAGE\3.png" />
+    <Content Include="IMAGE\arrow.png" />
+    <Content Include="IMAGE\bg1.jpg" />
+    <Content Include="IMAGE\btn.png" />
+    <Content Include="IMAGE\h.png" />
+    <Content Include="IMAGE\nurse-512.png" />
+    <Content Include="UI\AddRateDr.aspx" />
+    <Content Include="UI\DrInfoConfirm.aspx" />
+    <Content Include="UI\DrInfoUI.aspx" />
+    <Content Include="UI\DrProfileUI.aspx" />
+    <Content Include="UI\DrScheduleUI.aspx" />
+    <Content Include="UI\DrSearchUI.aspx" />
+    <Content Include="UI\Home.aspx" />
+    <Content Include="UI\PaPro.aspx" />
+    <Content Include="UI\PatientEmailCon.aspx" />
+    <Content Include="UI\PatientForm1.aspx" />
+    <Content Include="UI\PatientImg.aspx" />
+    <Content Include="UI\Raynaud.aspx" />
+    <Content Include="UI\SympsService.asmx" />
+    <Content Include="UI\SymptomHome.aspx" />
+    <Content Include="UI\test.aspx" />
+    <Content Include="UI\Trauma.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\DrManager.cs" />
+    <Compile Include="BLL\PatientManager.cs" />
+    <Compile Include="DAL\DrGetway.cs" />
+    <Compile Include="DAL\PatientGetway.cs" />
+    <Compile Include="DAL\PatientList.cs" />
+    <Compile Include="disease.cs" />
+    <Compile Include="MODAL\PatientInfo.cs" />
+    <Compile Include="symps.cs" />
+    <Compile Include="UI\Abscess.aspx.cs">
+      <DependentUpon>Abscess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Abscess.aspx.designer.cs">
+      <DependentUpon>Abscess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Accroyanosis.aspx.cs">
+      <DependentUpon>Accroyanosis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Accroyanosis.aspx.designer.cs">
+      <DependentUpon>Accroyanosis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AdminForm.aspx.cs">
+      <DependentUpon>AdminForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\AdminForm.aspx.designer.cs">
+      <DependentUpon>AdminForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\administrator.aspx.cs">
+      <DependentUpon>administrator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\administrator.aspx.designer.cs">
+      <DependentUpon>administrator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Blind.aspx.cs">
+      <DependentUpon>Blind.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Blind.aspx.designer.cs">
+      <DependentUpon>Blind.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Bronchities.aspx.cs">
+      <DependentUpon>Bronchities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Bronchities.aspx.designer.cs">
+      <DependentUpon>Bronchities.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CheckPatient.aspx.cs">
+      <DependentUpon>CheckPatient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\CheckPatient.aspx.designer.cs">
+      <DependentUpon>CheckPatient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Clinic.aspx.cs">
+      <DependentUpon>Clinic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Clinic.aspx.designer.cs">
+      <DependentUpon>Clinic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Diabetes.aspx.cs">
+      <DependentUpon>Diabetes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Diabetes.aspx.designer.cs">
+      <DependentUpon>Diabetes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DiseaseService.asmx.cs">
+      <DependentUpon>DiseaseService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\FileCS.ashx.cs">
+      <DependentUpon>FileCS.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Handler1.ashx.cs">
+      <DependentUpon>Handler1.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MODAL\DrInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringPass.cs" />
+    <Compile Include="UI\AddRateDr.aspx.cs">
+      <DependentUpon>AddRateDr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\AddRateDr.aspx.designer.cs">
+      <DependentUpon>AddRateDr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DrInfoConfirm.aspx.cs">
+      <DependentUpon>DrInfoConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\DrInfoConfirm.aspx.designer.cs">
+      <DependentUpon>DrInfoConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DrInfoUI.aspx.cs">
+      <DependentUpon>DrInfoUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\DrInfoUI.aspx.designer.cs">
+      <DependentUpon>DrInfoUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DrProfileUI.aspx.cs">
+      <DependentUpon>DrProfileUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\DrProfileUI.aspx.designer.cs">
+      <DependentUpon>DrProfileUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DrScheduleUI.aspx.cs">
+      <DependentUpon>DrScheduleUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\DrScheduleUI.aspx.designer.cs">
+      <DependentUpon>DrScheduleUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DrSearchUI.aspx.cs">
+      <DependentUpon>DrSearchUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\DrSearchUI.aspx.designer.cs">
+      <DependentUpon>DrSearchUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PaPro.aspx.cs">
+      <DependentUpon>PaPro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\PaPro.aspx.designer.cs">
+      <DependentUpon>PaPro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PatientEmailCon.aspx.cs">
+      <DependentUpon>PatientEmailCon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\PatientEmailCon.aspx.designer.cs">
+      <DependentUpon>PatientEmailCon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PatientForm1.aspx.cs">
+      <DependentUpon>PatientForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\PatientForm1.aspx.designer.cs">
+      <DependentUpon>PatientForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PatientImg.aspx.cs">
+      <DependentUpon>PatientImg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\PatientImg.aspx.designer.cs">
+      <DependentUpon>PatientImg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Raynaud.aspx.cs">
+      <DependentUpon>Raynaud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Raynaud.aspx.designer.cs">
+      <DependentUpon>Raynaud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SympsService.asmx.cs">
+      <DependentUpon>SympsService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\SymptomHome.aspx.cs">
+      <DependentUpon>SymptomHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\SymptomHome.aspx.designer.cs">
+      <DependentUpon>SymptomHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Trauma.aspx.cs">
+      <DependentUpon>Trauma.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Trauma.aspx.designer.cs">
+      <DependentUpon>Trauma.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataTables-1.10.13\Buttons-1.2.4\swf\" />
+    <Folder Include="Upload\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55044</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55044/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

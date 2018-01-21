@@ -1,0 +1,6 @@
+2 images. 
+One image is noiseless and the other is noisy. 
+Apply your adaptive smoothing filter to the noisy image. 
+The noiseless image is only for comparison. (Don't use it for your filtering) 
+
+Image format : 16 bit unsigned integer, 256x256 

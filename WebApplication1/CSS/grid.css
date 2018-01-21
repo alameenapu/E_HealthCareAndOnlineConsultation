@@ -1,0 +1,89 @@
+﻿body {
+}
+/*gridview*/
+.table table  tbody  tr  td a ,
+.table table  tbody  tr  td  span {
+position: relative;
+float: left;
+padding: 6px 12px;
+margin-left: -1px;
+line-height: 1.42857143;
+color: #337ab7;
+text-decoration: none;
+background-color: #fff;
+border: 1px solid #ddd;
+}
+
+.table table > tbody > tr > td > span {
+z-index: 3;
+color: #fff;
+cursor: default;
+background-color: #337ab7;
+border-color: #337ab7;
+}
+
+.table table > tbody > tr > td:first-child > a,
+.table table > tbody > tr > td:first-child > span {
+margin-left: 0;
+border-top-left-radius: 4px;
+border-bottom-left-radius: 4px;
+}
+
+.table table > tbody > tr > td:last-child > a,
+.table table > tbody > tr > td:last-child > span {
+border-top-right-radius: 4px;
+border-bottom-right-radius: 4px;
+}
+
+.table table > tbody > tr > td > a:hover,
+.table   table > tbody > tr > td > span:hover,
+.table table > tbody > tr > td > a:focus,
+.table table > tbody > tr > td > span:focus {
+z-index: 2;
+color: #23527c;
+background-color: #eee;
+border-color: #ddd;
+}
+/*end gridview */
+
+        .mymodal {
+    
+    display:none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    /*background-color:white; /* Fallback color */*/
+    /*background-color: rgba(0,0,0,0.4); /* Black w/ opacity */*/
+}
+
+
+
+/* Modal Content/Box */
+.mymodal-content {
+    background-color: #fefefe;
+    border-radius: 25px;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 2px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+    height:37%;
+}
+
+/* The Close Button */
+.myclose {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.myclose:hover,
+.myclose:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
